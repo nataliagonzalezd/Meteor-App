@@ -1,29 +1,33 @@
-import React from 'react';
-import { useTracker } from 'meteor/react-meteor-data';
-import { ProductsCollection } from '../api/ProductsCollection.js';
-import { Product } from './Product.jsx';
+import React, { Fragment } from "react";
+import { Meteor } from "meteor/meteor";
+import { useTracker } from "meteor/react-meteor-data";
+import { ProductsView } from "./views/ProductsView";
+import { LoginView } from "./views/LoginView";
+import { ShoppingCartView } from "./views/ShoppingCartView";
+import { Navbar } from "./components/Navbar";
 
 export const App = () => {
-  const { products, isLoading } = useTracker(() => {
-    const handle = Meteor.subscribe('products');
-    const isLoading = !handle.ready();
-    const products = ProductsCollection.find().fetch();
-
-    return { isLoading, products };
-  });
+  const user = useTracker(() => Meteor.user());
+  const logout = () => Meteor.logout();
 
   return (
-    <div>
-      <h1>Welcome to Meteor!</h1>
-      {isLoading ? (
-        <div>Loading...</div>
+    <div className="main">
+      {user ? (
+        <Fragment>
+          <div className="user" onClick={logout}>
+            {user.username || user.profile.name} 🚪
+          </div>
+          <div>
+            <Navbar />
+            <ProductsView />
+            <ShoppingCartView />
+          </div>
+        </Fragment>
       ) : (
-        <ul>
-          {products.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
-        </ul>
+        <LoginView />
       )}
+      ;
     </div>
   );
 };
+

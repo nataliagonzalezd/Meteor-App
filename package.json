@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.20.7",
+    "@popperjs/core": "^2.11.7",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.2.3",
     "meteor-node-stubs": "^1.2.5",
+    "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
