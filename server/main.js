@@ -27,14 +27,13 @@ Meteor.startup(() => {
   }
 });
 
-
 ServiceConfiguration.configurations.upsert(
   { service: 'github' },
   {
     $set: {
       loginStyle: 'popup',
-      clientId: '6036e6de5b321c813bf0',
-      secret: '9942eca6ff3b6011a79aba012b83b58edf1f8ff0', 
+      clientId: Meteor.settings.private.github.clientId,
+      secret: Meteor.settings.private.github.secret,
     },
   }
 );
