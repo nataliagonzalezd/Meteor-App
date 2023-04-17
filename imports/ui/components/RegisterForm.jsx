@@ -1,16 +1,22 @@
-import { Meteor } from "meteor/meteor";
 import React, { useState } from "react";
-import { LoginWithGithub } from "./LoginWithGithub";
+import { Accounts } from "meteor/accounts-base";
+import { Meteor } from "meteor/meteor";
 import { Link } from "react-router-dom";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const submit = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
-
-    Meteor.loginWithPassword(username, password);
+    Accounts.createUser({ username, email, password }, (error) => {
+      if (error) {
+        console.log(error.reason);
+      } else {
+        Meteor.loginWithPassword(username, password);
+      }
+    });
   };
 
   return (
@@ -23,18 +29,31 @@ const LoginForm = () => {
               <div className="container">
                 <div className="row">
                   <div className="col-lg-10 col-xl-7 mx-auto">
-                    <h3 className="display-4">Hi!</h3>
-                    <p className="text-muted mb-4">Please Log in to Continue</p>
-                    <form onSubmit={submit}>
+                    <h3 className="display-4">Welcome!</h3>
+                    <p className="text-muted mb-4">
+                      Please register to continue
+                    </p>
+                    <form onSubmit={handleRegister}>
                       <div className="form-group mb-3">
                         <input
-                          id="inputEmail"
+                          id="inputUserName"
                           type="text"
                           placeholder="User name"
                           required
                           autoFocus=""
                           className="form-control rounded-pill border-0 shadow-sm px-4"
                           onChange={(e) => setUsername(e.target.value)}
+                        />
+                      </div>
+                      <div className="form-group mb-3">
+                        <input
+                          id="inputEmail"
+                          type="text"
+                          placeholder="Email"
+                          required
+                          autoFocus=""
+                          className="form-control rounded-pill border-0 shadow-sm px-4"
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
                       <div className="form-group mb-3">
@@ -49,18 +68,17 @@ const LoginForm = () => {
                       </div>
                       <button
                         type="submit"
-                        className="btn btn-round btn-outline btn-dribbble text-left w-100 mb-3"
+                        className="btn btn-outline btn-dribble btn-round text-left w-100 mb-3"
                       >
                         Sign in
                       </button>
+                      <Link
+                        to="/login"
+                        className="btn btn-outline btn-dribble btn-round text-left w-100 mb-3"
+                      >
+                        Back to Login
+                      </Link>
                     </form>
-                    <LoginWithGithub />
-                    <Link
-                      to="/register"
-                      className="btn btn-outline btn-dribble btn-round text-left w-100 mb-3"
-                    >
-                      Don't have an account? Register Here
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -72,4 +90,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

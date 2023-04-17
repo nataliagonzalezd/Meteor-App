@@ -1,343 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 body {
-  padding: 10px;
   font-family: "Poppins", sans-serif;
   color: #444444;
 }
 
 a,
 a:hover {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+.btn {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
+}
+
+.btn.btn-round {
+  border-radius: 40px;
+}
+
+.btn.btn-outline {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  background: transparent;
+}
+
+/* Products View */
+
 .section-products {
-    padding: 80px 0 54px;
+  padding: 80px 0 54px;
 }
 
 .section-products .header {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 
 .section-products .header h2 {
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: #444444; 
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #444444;
 }
 
 .section-products .single-product {
-    margin-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .section-products .single-product .part-1 {
-    position: relative;
-    height: 290px;
-    max-height: 290px;
-    margin-bottom: 20px;
-    overflow: hidden;
+  position: relative;
+  height: 290px;
+  max-height: 290px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 
 .section-products .single-product:hover .part-1::before {
-		transform: scale(1.2,1.2) rotate(5deg);
+  transform: scale(1.2, 1.2) rotate(5deg);
 }
 
 .section-products .single-product .part-1 .discount,
 .section-products .single-product .part-1 .new {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    color: #ffffff;
-    background-color: #fe302f;
-    padding: 2px 8px;
-    text-transform: uppercase;
-    font-size: 0.85rem;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #ffffff;
+  background-color: #fe302f;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .section-products .single-product .part-1 ul {
-    position: absolute;
-    bottom: -41px;
-    left: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    transition: bottom 0.5s, opacity 0.5s;
+  position: absolute;
+  bottom: -41px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
 }
 
 .section-products .single-product .part-1 ul li {
-    display: inline-block;
-    margin-right: 4px;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .section-products .single-product .part-1 ul li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #ffffff;
-    color: #444444;
-    text-align: center;
-    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
-    transition: color 0.2s;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+  transition: color 0.2s;
 }
 
 .section-products .single-product .part-2 .product-title {
-    font-size: 1rem;
+  color: #181818;
+  font-size: 1rem;
+}
+
+.product-description {
+  font-size: 0.8rem;
+  color: #444444;
 }
 
 .section-products .single-product .part-2 h4 {
-    display: inline-block;
-    font-size: 1rem;
+  display: inline-block;
+  font-size: 1rem;
 }
 
 .section-products .single-product .part-2 .product-old-price {
-    position: relative;
-    padding: 0 7px;
-    margin-right: 2px;
-    opacity: 0.6;
+  position: relative;
+  padding: 0 7px;
+  margin-right: 2px;
+  opacity: 0.6;
 }
 
 .section-products .single-product .part-2 .product-old-price::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #444444;
-    transform: translateY(-50%);
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  transform: translateY(-50%);
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-form > div {
-    margin: 8px;
-  }
-  
-  .login-form > div > label {
-    font-weight: bold;
-  }
-  
-  .login-form > div  > input {
-    flex-grow: 1;
-    box-sizing: border-box;
-    padding: 10px 6px;
-    background: transparent;
-    border: 1px solid #aaa;
-    width: 100%;
-    font-size: 1em;
-    margin-right: 16px;
-    margin-top: 4px;
-  }
-  
-  .login-form > div > input:focus {
-    outline: 0;
-  }
-  
-  .login-form > div > button {
-    background-color: #62807e;
-  }
+/* Github Button */
 
-  .user {
-    display: flex;
-  
-    align-self: flex-end;
-  
-    margin: 8px 16px 0;
-    font-weight: bold;
-  }
+.github-btn {
+  border: 1px solid #e1e5f0;
+  background-color: #fff;
+  width: 245px;
+  margin: 0 auto 16px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .github-btn {
-    border: 1px solid #e1e5f0;
-    background-color: #fff;
-    width: 245px;
-    margin: 0 auto 16px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .github-btn > div {
-    margin-left: 4px;
-  }
+.github-btn>div {
+  margin-left: 4px;
+}
 
-  /*ACA EL SHOPPING CART*/
 
-  #cart {
-    max-width: 1440px;
-    padding-top: 60px;
-    margin: auto;
-  }
-  .form div {
-    margin-bottom: 0.4em;
-  }
-  .cartItem {
-    --bs-gutter-x: 1.5rem;
-  }
-  .cartItemQuantity,
-  .proceed {
-    background: #f4f4f4;
-  }
-  .items {
-    padding-right: 30px;
-  }
-  #btn-checkout {
-    min-width: 100%;
-  }
-  
-  /* stasysiia.com */
-  @import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
-  body {
-    background-color: #fff;
-    font-family: "Exo", sans-serif;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
-    color: #111111;
-    justify-content: center;
-    align-items: center;
-  }
-  a {
-    color: #0e1111;
-    text-decoration: none;
-  }
-  .btn-check:focus + .btn-primary,
-  .btn-primary:focus {
-    color: #fff;
-    background-color: #111;
-    border-color: transparent;
-    box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
-  }
-  button:hover,
-  .btn:hover {
-    box-shadow: 5px 5px 7px #c8c8c8, -5px -5px 7px white;
-  }
-  button:active {
-    box-shadow: 2px 2px 2px #c8c8c8, -2px -2px 2px white;
-  }
-  
-  /*PREVENT BROWSER SELECTION*/
-  a:focus,
-  button:focus,
-  input:focus,
-  textarea:focus {
-    outline: none;
-  }
-  /*main*/
-  main:before {
-    content: "";
-    display: block;
-    height: 88px;
-  }
-  h1 {
-    font-size: 2.4em;
-    font-weight: 600;
-    letter-spacing: 0.15rem;
-    text-align: center;
-    margin: 30px 6px;
-  }
-  h2 {
-    color: rgb(37, 44, 54);
-    font-weight: 700;
-    font-size: 2.5em;
-  }
-  h3 {
-    border-bottom: solid 2px #000;
-  }
-  h5 {
-    padding: 0;
-    font-weight: bold;
-    color: #92afcc;
-  }
-  p {
-    color: #333;
-    font-family: "Roboto", sans-serif;
-    margin: 0.6em 0;
-  }
-  h1,
-  h2,
-  h4 {
-    text-align: center;
-    padding-top: 16px;
-  }
-  /* yukito bloody */
-  .back {
-    position: relative;
-    top: -30px;
-    font-size: 16px;
-    margin: 10px 10px 3px 15px;
-  }
-  .inline {
-    display: inline-block;
-  }
-  
-  .shopnow,
-  .contact {
-    background-color: #000;
-    padding: 10px 20px;
-    font-size: 30px;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.5s;
-    cursor: pointer;
-  }
-  .shopnow:hover {
-    text-decoration: none;
-    color: white;
-    background-color: #c41505;
-  }
-  /* for button animation*/
-  .shopnow span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: all 0.5s;
-  }
-  .shopnow span:after {
-    content: url("https://badux.co/smc/codepen/caticon.png");
-    position: absolute;
-    font-size: 30px;
-    opacity: 0;
-    top: 2px;
-    right: -6px;
-    transition: all 0.5s;
-  }
-  .shopnow:hover span {
-    padding-right: 25px;
-  }
-  .shopnow:hover span:after {
-    opacity: 1;
-    top: 2px;
-    right: -6px;
-  }
-  .ma {
-    margin: auto;
-  }
-  .price {
-    color: slategrey;
-    font-size: 2em;
-  }
-  #mycart {
-    min-width: 90px;
-  }
-  #cartItems {
-    font-size: 17px;
-  }
-  #product .container .row .pr4 {
-    padding-right: 15px;
-  }
-  #product .container .row .pl4 {
-    padding-left: 15px;
-  }
+/* LOGIN FORM */
+
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('https://i.pinimg.com/564x/bb/53/7e/bb537e1c7ca462ab6f8ed0a59af26bca.jpg');
+  background-size: cover;
+  background-position: center center;
+}

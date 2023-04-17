@@ -1,16 +1,20 @@
-import React from 'react';
-import { Meteor } from 'meteor/meteor';
+import React from "react";
+import { Meteor } from "meteor/meteor";
 
 export const LoginWithGithub = () => {
   const handleGithubLogin = () => {
     Meteor.loginWithGithub({
-      requestPermissions: ['user'],
-      loginStyle: 'popup',
+      requestPermissions: ["user"],
+      loginStyle: "popup",
     });
   };
 
   return (
-    <button type="button" className="github-btn" onClick={handleGithubLogin}>
+    <button
+      type="button"
+      className="btn btn-round btn-outline btn-dribbble text-left w-100 mb-3"
+      onClick={handleGithubLogin}
+    >
       Login with Github
       <div>
         <svg fill="#000000" viewBox="0 0 30 30" width="20px" height="20px">
