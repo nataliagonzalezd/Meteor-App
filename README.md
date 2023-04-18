@@ -35,23 +35,20 @@ The first steps to use the application are:
 
   Download the repository.
   Go to the repository directory.
-  Once Meteor is installed, run the following command in the terminal to       install the project dependencies:
+  Once Meteor is installed, run the following command in the terminal to install the project dependencies:
   
   ```bash
 meteor npm install
 ```
 
 Run the command  
-```bash
-meteor
-```
+`meteor`
 on Windows or  
 ```bash
 meteor run
-```
-on Linux to start the application on localhost
+``` on Linux to start the application on localhost.
 
-##Github Credentials
+## Github Credentials
 
 In order to our Github login works, we need to get our Github Credentials first. Register your OAuth Application on this link filling the Application Name, Homepage URL, and the Authorization callback URL, for both URLs you can use http://localhost:3000 for now. Click on Register Application.
 
