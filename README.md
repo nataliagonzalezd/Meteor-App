@@ -44,7 +44,7 @@ Run the command `meteor`on Windows or `meteor run`on Linux to start the applicat
 
 ## Github Credentials
 
-In order to our Github login works, we need to get our Github Credentials first. Register your OAuth Application on this link filling the Application Name, Homepage URL, and the Authorization callback URL, for both URLs you can use http://localhost:3000 for now. Click on Register Application.
+In order to our Github login works, we need to get our Github Credentials first. Register your OAuth Application on [this link](https://react-tutorial.meteor.com/simple-todos/08-adding-login-with-github.html) filling the Application Name, Homepage URL, and the Authorization callback URL, for both URLs you can use http://localhost:3000 for now. Click on Register Application.
 
 On the next screen, grab your Client ID and click on Generate a new client secret and copy your new client secret. We are going to use both of these keys to connect to Github.
 
@@ -54,14 +54,14 @@ Now, we need to configure our server to fully connect to Github:
 
 Add the following content to the settings.json file, 
 
-```bash
+```json
 {
-  "private": {
-    "github": {
-      "clientId": "your-client-id",
-      "secret": "your-client-secret"
-    }
-  }
+"private": {
+"github": {
+"clientId": "your-client-id",
+"secret": "your-client-secret"
+}
+}
 }
 ```
 
