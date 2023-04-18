@@ -26,6 +26,31 @@ An alternative for Linux and OS X, is to install Meteor by using curl:
   <li>Run the command <code class="css">meteor</code> on Windows or <code class="css">meteor run</code> on Linux to start the application on localhost.</li>
 </ol>
 
+<h2>Github Credentials</h2>
+
+<p>In order to our Github login works, we need to get our Github Credentials first. Register your OAuth Application on this link filling the Application Name, Homepage URL, and the Authorization callback URL, for both URLs you can use http://localhost:3000 for now. Click on Register Application.
+
+On the next screen, grab your Client ID and click on Generate a new client secret and copy your new client secret. We are going to use both of these keys to connect to Github.
+
+Now, we need to configure our server to fully connect to Github:
+
+1.Create a file called settings.json in the root folder of your project. 
+
+Add the following content to the settings.json file, 
+{
+  "private": {
+    "github": {
+      "clientId": "<your-client-id>",
+      "secret": "<your-client-secret>"
+    }
+  }
+}
+
+replacing <your-client-id> and <your-client-secret> with your own Github credentials.
+
+To complete the Github integration setup, you also need to uncomment the lines of code in main.js from line 30 to 40. These lines configure the Meteor application to connect to Github using the credentials specified in the settings.json file. Once you have uncommented these lines and added your Github credentials to the settings.json file, you should be able to use Github OAuth to log in to your Meteor application.
+
+</p>
 
 ******************************************************************************************************************************************************
 
