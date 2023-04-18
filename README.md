@@ -1,4 +1,4 @@
-# Meteor-App  [Ver en Espanol](./README.es.md)
+# Meteor-App  ## [Ver en Español](./README.es.md)
 
 Online shopping cart application using Meteor.js technology and a MongoDB database
 
