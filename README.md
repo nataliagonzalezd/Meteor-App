@@ -1,4 +1,5 @@
-<span style="display: inline-block; margin-right: 10px;"><h1>Meteor-App</h1></span><a href="./README.es.md" style="display: inline-block;">Ver en español</a>
+<h1 style="float: left;">Meteor-App</h1>
+<a href="./README.es.md" style="float: right;">Ver en español</a>
 <p>Online shopping cart application using Meteor.js technology and a MongoDB database</p>
 
 <h2>Prerequisites</h2>
