@@ -27,6 +27,8 @@ An alternative for Linux and OS X, is to install Meteor by using curl:
 </ol>
 
 
+******************************************************************************************************************************************************
+
 <h1>Meteor-App</h1>
 <p>Aplicación de carrito de compras en línea utilizando la tecnología Meteor.js y una base de datos MongoDB</p>
 
@@ -34,7 +36,6 @@ An alternative for Linux and OS X, is to install Meteor by using curl:
 <p>Versión de Node.js</p>
 <p>Se requiere una versión de Node.js >= 10 y <= 14.</p>
 
-******************************************************************************************************************************************************
 
 <h3>Instalación</h2>
 Instala la última versión oficial de Meteor.js desde tu terminal ejecutando uno de los comandos a continuación.
