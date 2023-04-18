@@ -23,8 +23,7 @@ Una alternativa para Linux y OS X es instalar Meteor mediante curl:
 curl https://install.meteor.com/ | sh
 ```
 
-> ⚠️ Durante la instalación se agrega el PATH al binario de meteor a su origen de terminal, para que funcione correctamente es necesario reiniciar la terminal o ejecutar `source <your_terminal_source>`.Dependiendo de la terminal, el archivo de origen podría ser 
-could be `.bashrc`, `.bash_profile`, o `.zshrc`
+> ⚠️ Durante la instalación se agrega el PATH al binario de meteor a su origen de terminal, para que funcione correctamente es necesario reiniciar la terminal o ejecutar `source <your_terminal_source>`.Dependiendo de la terminal, el archivo de origen podría ser `.bashrc`, `.bash_profile`, o `.zshrc`
 
 > ℹ️  Para obtener más información, visite la [página de documentación de Meteor](https://docs.meteor.com/install.html)
 
