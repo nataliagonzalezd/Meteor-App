@@ -1,4 +1,4 @@
-<h1>Meteor-App</h1>
+<h1>Meteor-App</h1> [Ver en español](./README.es.md)
 <p>Online shopping cart application using Meteor.js technology and a MongoDB database</p>
 
 <h2>Prerequisites</h2>
