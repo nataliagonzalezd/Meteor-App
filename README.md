@@ -66,6 +66,13 @@ Add the following content to the settings.json file,
 
 replacing your-client-id and your-client-secret with your own Github credentials.
 
+To troubleshoot issues with Github, you can try running the settings with the following command: 
+
+  
+  ```bash
+meteor run --settings <path_to_your_settings_file>.
+```
+
 To complete the Github integration setup, you also need to uncomment the lines of code in main.js from line 30 to 40. These lines configure the Meteor application to connect to Github using the credentials specified in the settings.json file. Once you have uncommented these lines and added your Github credentials to the settings.json file, you should be able to use Github OAuth to log in to your Meteor application.
 
 > ℹ️  For more information, please visit the [Meteor documentation page](https://react-tutorial.meteor.com/simple-todos/08-adding-login-with-github.html)
