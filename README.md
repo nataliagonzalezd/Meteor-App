@@ -41,12 +41,7 @@ The first steps to use the application are:
 meteor npm install
 ```
 
-Run the command  
-`meteor`
-on Windows or  
-```bash
-meteor run
-``` on Linux to start the application on localhost.
+Run the command `meteor`on Windows or `meteor run`on Linux to start the application on localhost.
 
 ## Github Credentials
 
@@ -60,7 +55,7 @@ Now, we need to configure our server to fully connect to Github:
 
 Add the following content to the settings.json file, 
 
-
+```bash
 {
   "private": {
     "github": {
@@ -69,7 +64,7 @@ Add the following content to the settings.json file,
     }
   }
 }
-
+```
 
 replacing your-client-id and your-client-secret with your own Github credentials.
 
