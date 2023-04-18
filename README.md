@@ -1,4 +1,4 @@
-<h1>Meteor-App</h1> [Ver en español](./README.es.md)
+<h1>Meteor-App</h1> <a href="./README.es.md">Ver en español</a>
 <p>Online shopping cart application using Meteor.js technology and a MongoDB database</p>
 
 <h2>Prerequisites</h2>
