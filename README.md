@@ -37,6 +37,9 @@ Now, we need to configure our server to fully connect to Github:
 1.Create a file called settings.json in the root folder of your project. 
 
 Add the following content to the settings.json file, 
+  
+<pre>
+<code class="css">
 {
   "private": {
     "github": {
@@ -45,6 +48,8 @@ Add the following content to the settings.json file,
     }
   }
 }
+</code>
+</pre>
 
 replacing <your-client-id> and <your-client-secret> with your own Github credentials.
 
