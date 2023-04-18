@@ -27,7 +27,7 @@ Meteor.startup(() => {
   }
 });
 
-ServiceConfiguration.configurations.upsert(
+/*ServiceConfiguration.configurations.upsert(
   { service: 'github' },
   {
     $set: {
@@ -37,3 +37,4 @@ ServiceConfiguration.configurations.upsert(
     },
   }
 );
+*/
