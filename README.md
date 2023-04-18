@@ -60,7 +60,6 @@ Now, we need to configure our server to fully connect to Github:
 Add the following content to the settings.json file, 
 
 
-```bash
 {
   "private": {
     "github": {
@@ -69,7 +68,7 @@ Add the following content to the settings.json file,
     }
   }
 }
-```
+
 
 replacing your-client-id and your-client-secret with your own Github credentials.
 
