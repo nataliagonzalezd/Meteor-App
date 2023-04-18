@@ -41,9 +41,15 @@ The first steps to use the application are:
 meteor npm install
 ```
 
-Run the command  ```bash
-meteor``` on Windows or  ```bash
-meteor run``` on Linux to start the application on localhost
+Run the command  
+```bash
+meteor
+```
+on Windows or  
+```bash
+meteor run
+```
+on Linux to start the application on localhost
 
 ##Github Credentials
 
