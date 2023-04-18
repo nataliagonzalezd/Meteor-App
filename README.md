@@ -60,8 +60,7 @@ Add the following content to the settings.json file,
 "github": {
 "clientId": "your-client-id",
 "secret": "your-client-secret"
-}
-}
+}}
 }
 ```
 
