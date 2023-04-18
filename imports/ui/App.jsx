@@ -18,6 +18,7 @@ export const App = () => {
           <Fragment>
             <div>
               <Navbar />
+            {/* FIXME: Redirecting routes is not the best practice, but due to issues with react and meteor imports, this is the best solution for the moment. */}
               <Routes>
                 <Route exact path="/" element={<ProductsView />} />
                 <Route path="/cart" element={<ShoppingCartView />} />
